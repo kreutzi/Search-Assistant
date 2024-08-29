@@ -1,0 +1,18 @@
+<nav>
+  <ul>
+    <li><a routerLink="/">Home</a></li>
+    <li *ngIf="authService.isLoggedIn">
+      <a routerLink="/chat">Chat</a>
+    </li>
+    <li><a routerLink="/about">About</a></li>
+    <li *ngIf="!authService.isLoggedIn">
+      <a routerLink="/signup">Log In</a>
+    </li>
+    <li *ngIf="authService.isLoggedIn">
+      <p (click)="this.authService.logout()">LogOut</p>
+    </li>
+  </ul>
+</nav>
+<div [@routeAnimations]="getRouteAnimationData()">
+  <router-outlet></router-outlet>
+</div>

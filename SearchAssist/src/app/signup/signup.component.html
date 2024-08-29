@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>{{ isLoginMode ? "Login" : "Sign Up" }} for GemAssist</h2>
+  <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+    <input *ngIf="!isLoginMode" formControlName="firstname" type="text" placeholder="First Name" required />
+    <input *ngIf="!isLoginMode" formControlName="lastname" type="text" placeholder="Last Name" required />
+    <input *ngIf="!isLoginMode" formControlName="username" type="text" placeholder="Username" required />
+    <input formControlName="email" type="email" placeholder="Email" required />
+    <input formControlName="password" type="password" placeholder="Password" required />
+    <div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>
+    <button type="submit" [disabled]="!authForm.valid">
+      {{ isLoginMode ? "Login" : "Sign Up" }}
+    </button>
+  </form>
+  <p>
+    {{ isLoginMode ? "Don't have an account?" : "Already have an account?" }}
+    <a (click)="toggleMode()">{{ isLoginMode ? "Sign Up" : "Login" }}</a>
+  </p>
+</div>

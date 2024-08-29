@@ -1,0 +1,88 @@
+/* home.component.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* Ensure the container fills the screen height */
+  padding: 2rem;
+  text-align: center;
+  /* Center text within the container */
+  font-family: "Arial", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* Allow features to wrap on smaller screens */
+  margin-bottom: 3rem;
+}
+
+.feature {
+  width: 300px;
+  margin: 1rem;
+  padding: 2rem;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  text-align: left;
+  /* Align text within each feature to the left */
+}
+
+.feature i {
+  font-size: 2rem;
+  color: #007bff;
+  /* Example icon color */
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Media query for responsiveness (adjust breakpoints as needed) */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 90%;
+    /* Make features take up more width on smaller screens */
+    margin: 1rem 0;
+  }
+}

@@ -1,0 +1,28 @@
+nav {
+  background-color: #f8f9fa;
+  padding: 0.5rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+p {
+  margin: 0;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+p:hover {
+  cursor: pointer;
+}
